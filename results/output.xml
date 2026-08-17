@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.6 on win32)" generated="2026-08-16T14:19:11.053289" rpa="false" schemaversion="5">
+<suite id="s1" name="EVENTHUBAUTOMATION" source="C:\EVENTHUBAUTOMATION">
+<suite id="s1-s1" name="TESTS" source="C:\EVENTHUBAUTOMATION\TESTS">
+<suite id="s1-s1-s1" name="BOOKINGS" source="C:\EVENTHUBAUTOMATION\TESTS\BOOKINGS">
+<suite id="s1-s1-s1-s1" name="Bookings" source="C:\EVENTHUBAUTOMATION\TESTS\BOOKINGS\Bookings.robot">
+<test id="s1-s1-s1-s1-t1" name="TC08 - Verify User Can Increase Ticket Quantity" line="30">
+<kw name="Open EventHub" owner="ReusableKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-08-16T14:19:11.741609" level="INFO">Opening browser 'chrome' to base url 'https://eventhub.rahulshettyacademy.com/register'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-08-16T14:19:11.740935" elapsed="2.084127"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-08-16T14:19:13.826273" elapsed="0.224685"/>
+</kw>
+<status status="PASS" start="2026-08-16T14:19:11.739219" elapsed="2.312293"/>
+</kw>
+<kw name="Login User" owner="ReusableKeywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-08-16T14:19:14.054390" level="INFO">Opening url 'https://eventhub.rahulshettyacademy.com/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-08-16T14:19:14.053730" elapsed="0.220440"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=email</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-16T14:19:14.276281" elapsed="0.054584"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-16T14:19:14.332318" level="INFO">Typing text 'aakriti.test001@example.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-16T14:19:14.331323" elapsed="0.376359"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-16T14:19:14.709546" level="INFO">Typing text 'Test@1234' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-16T14:19:14.708305" elapsed="0.187845"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-08-16T14:19:14.897956" level="INFO">Clicking button 'id=login-btn'.</msg>
+<arg>id=login-btn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-16T14:19:14.896796" elapsed="0.160009"/>
+</kw>
+<arg>aakriti.test001@example.com</arg>
+<arg>Test@1234</arg>
+<status status="PASS" start="2026-08-16T14:19:14.052601" elapsed="1.004831"/>
+</kw>
+<kw name="Open Event From Events Page" owner="ReusableKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=book-now-btn</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-16T14:19:15.059486" elapsed="0.703822"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=book-now-btn</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-08-16T14:19:15.763929" elapsed="0.373497"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id=book-now-btn</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-08-16T14:19:16.138391" elapsed="0.047312"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-16T14:19:16.187366" level="INFO">Clicking element 'id=book-now-btn'.</msg>
+<arg>id=book-now-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-16T14:19:16.186595" elapsed="0.122950"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Book Tickets</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-08-16T14:19:16.310024" elapsed="0.463667"/>
+</kw>
+<status status="PASS" start="2026-08-16T14:19:15.058577" elapsed="1.715528"/>
+</kw>
+<kw name="Increase Ticket Quantity" owner="ReusableKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=ticket-count</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-16T14:19:16.776149" elapsed="0.042709"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-08-16T14:19:16.863434" level="INFO">${initial_count} = 1</msg>
+<var>${initial_count}</var>
+<arg>id=ticket-count</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-16T14:19:16.819366" elapsed="0.044435"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-08-16T14:19:16.865339" level="INFO">Clicking button 'xpath=//span[@id="ticket-count"]/following-sibling::button[1]'.</msg>
+<arg>xpath=//span[@id="ticket-count"]/following-sibling::button[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-16T14:19:16.864278" elapsed="0.167014"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-08-16T14:19:17.033248" level="INFO">${expected_count} = 2</msg>
+<var>${expected_count}</var>
+<arg>int(${initial_count}) + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-08-16T14:19:17.031785" elapsed="0.001805"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-08-16T14:19:17.064289" level="INFO">${new_count} = 2</msg>
+<var>${new_count}</var>
+<arg>id=ticket-count</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-16T14:19:17.034032" elapsed="0.030633"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-08-16T14:19:17.066585" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<arg>${new_count}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-08-16T14:19:17.065175" elapsed="0.002017"/>
+</kw>
+<status status="PASS" start="2026-08-16T14:19:16.775029" elapsed="0.292606"/>
+</kw>
+<kw name="Close EventHub" owner="ReusableKeywords" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-08-16T14:19:17.070227" elapsed="2.413159"/>
+</kw>
+<status status="PASS" start="2026-08-16T14:19:17.068847" elapsed="2.415316"/>
+</kw>
+<doc>Verify user can increase the number of tickets before booking</doc>
+<tag>booking</tag>
+<tag>positive</tag>
+<status status="PASS" start="2026-08-16T14:19:11.729870" elapsed="7.755460"/>
+</test>
+<status status="PASS" start="2026-08-16T14:19:11.180722" elapsed="8.325619"/>
+</suite>
+<status status="PASS" start="2026-08-16T14:19:11.167905" elapsed="8.372310"/>
+</suite>
+<status status="PASS" start="2026-08-16T14:19:11.149407" elapsed="8.401892"/>
+</suite>
+<status status="PASS" start="2026-08-16T14:19:11.068366" elapsed="8.494821"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">booking</stat>
+<stat pass="1" fail="0" skip="0">positive</stat>
+</tag>
+<suite>
+<stat name="EVENTHUBAUTOMATION" id="s1" pass="1" fail="0" skip="0">EVENTHUBAUTOMATION</stat>
+<stat name="TESTS" id="s1-s1" pass="1" fail="0" skip="0">EVENTHUBAUTOMATION.TESTS</stat>
+<stat name="BOOKINGS" id="s1-s1-s1" pass="1" fail="0" skip="0">EVENTHUBAUTOMATION.TESTS.BOOKINGS</stat>
+<stat name="Bookings" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">EVENTHUBAUTOMATION.TESTS.BOOKINGS.Bookings</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
